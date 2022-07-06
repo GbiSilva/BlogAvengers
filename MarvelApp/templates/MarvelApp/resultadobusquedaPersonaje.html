@@ -1,0 +1,20 @@
+{% extends "MarvelApp/padre.html" %}
+{% load static %}
+{% block contenidinamico %}
+<h3>Resultado de la búsqueda para Personajes</h3>
+<h3>Estamos listando el personaje {{nombre}}</h3>
+{% if personajes %} 
+<ul>
+    {%for personaje in personajes%}
+    <li>{{personaje.nombre}}</li>
+    <li>{{personaje.superpoder}}</li>
+    <li>{{personaje.actor_apellido}}</li>
+    <li>{{personaje.actor_nombre}}</li>
+    <br>
+    {% endfor %}
+</ul>
+{% endif %} 
+{% endblock %}
+
+
+

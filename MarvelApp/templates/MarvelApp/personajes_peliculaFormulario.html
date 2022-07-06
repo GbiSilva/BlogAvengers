@@ -1,0 +1,14 @@
+{% extends "MarvelApp/padre.html" %}
+{% load static %}
+{% block contenidinamico %}
+<h3>Formulario para Personajes de Pelicula</h3>
+<form action="{% url 'personajes_peliculaFormulario' %}" method="POST">{% csrf_token %}
+    <h1> Ingrese los datos del Personajes de la Pelicula</h1>    
+    <table>
+        {{mi_formulario.as_p}}
+    </table>
+    <input type="submit" value="Enviar formulario">
+</form>
+{% endblock %}
+
+

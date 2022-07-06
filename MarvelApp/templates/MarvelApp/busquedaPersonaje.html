@@ -1,0 +1,13 @@
+{% extends "MarvelApp/padre.html" %}
+{% load static %}
+{% block contenidinamico %}
+<h3>Búsqueda para Personajes</h3>
+<form action="{% url 'resultadoPersonaje' %}" method="GET">
+    <h1> Ingrese el dato del Personaje a buscar</h1>    
+    <input type="char" name="nombre" placeholder="nombre" id="nombre">
+    <input type="submit" value="resultadoPersonaje">
+</form>
+{% endblock %}
+
+
+
