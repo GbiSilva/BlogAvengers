@@ -1,0 +1,13 @@
+{% extends "MarvelApp/padre.html" %}
+{% load static %}
+{% block contenidodinamico %}
+<p>Nombre de la Película : <i>{{peliculas.nombre}}</i></p>
+<p>Sinopsis: <i>{{peliculas.sinopsis}}</i></p>
+<p>Año Estreno : <i>{{peliculas.anio}}</i></p>
+<p>Duración : <i>{{peliculas.duración}}</i></p>
+<p>Fase a la que pertenece : <i>{{peliculas.nro_fase}}</i></p>
+
+<p>
+  <a href="{% url 'peliculas_listar' %}">Volver a la lista de peliculas</a>
+</p>
+{% endblock %}

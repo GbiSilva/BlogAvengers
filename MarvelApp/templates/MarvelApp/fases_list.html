@@ -1,0 +1,23 @@
+{% extends "MarvelApp/padre.html" %}
+{% load static %}
+{% block contenidodinamico %}
+<h1>Esta es la sección de Fases</h1>
+{% for fases in object_list %}
+<li>{{fases}}</li>
+
+<button>
+  <a href="{% url 'fases_detalle' fases.id %}">Detalle</a>
+</button>
+<button>
+  <a href="{% url 'fases_editar' fases.id %}">Editar</a>
+</button>
+<button>
+  <a href="{% url 'fases_borrar' fases.id %}">Borrar</a>
+</button>
+{% endfor %}
+<br>
+<br>
+<button>
+  <a href="{% url 'fases_crear' %}">Crear</a>
+</button>
+{% endblock %}

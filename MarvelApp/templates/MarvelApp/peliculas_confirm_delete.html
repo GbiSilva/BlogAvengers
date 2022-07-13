@@ -1,0 +1,9 @@
+{% extends "MarvelApp/padre.html" %}
+{% load static %}
+{% block contenidodinamico %}
+<h1>Esta es la sección de Fases</h1>
+<form method="POST">{% csrf_token %}
+  <p>Estás seguro de eliminar la Película "{{object}}"</p>
+  <input type="submit" value="SI">
+</form>
+{% endblock %}

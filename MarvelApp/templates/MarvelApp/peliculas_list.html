@@ -1,0 +1,23 @@
+{% extends "MarvelApp/padre.html" %}
+{% load static %}
+{% block contenidodinamico %}
+<h1>Esta es la sección de Películas</h1>
+{% for peliculas in object_list %}
+<li>{{peliculas}}</li>
+
+<button>
+  <a href="{% url 'peliculas_detalle' peliculas.id %}">Detalle</a>
+</button>
+<button>
+  <a href="{% url 'peliculas_editar' peliculas.id %}">Editar</a>
+</button>
+<button>
+  <a href="{% url 'peliculas_borrar' peliculas.id %}">Borrar</a>
+</button>
+{% endfor %}
+<br>
+<br>
+<button>
+  <a href="{% url 'peliculas_crear' %}">Crear</a>
+</button>
+{% endblock %}

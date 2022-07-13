@@ -1,0 +1,23 @@
+{% extends "MarvelApp/padre.html" %}
+{% load static %}
+{% block contenidodinamico %}
+<h1>Esta es la sección de Personajes</h1>
+{% for personajes in object_list %}
+<li>{{personajes}}</li>
+
+<button>
+  <a href="{% url 'personajes_detalle' personajes.id %}">Detalle</a>
+</button>
+<button>
+  <a href="{% url 'personajes_editar' personajes.id %}">Editar</a>
+</button>
+<button>
+  <a href="{% url 'personajes_borrar' personajes.id %}">Borrar</a>
+</button>
+{% endfor %}
+<br>
+<br>
+<button>
+  <a href="{% url 'personajes_crear' %}">Crear</a>
+</button>
+{% endblock %}

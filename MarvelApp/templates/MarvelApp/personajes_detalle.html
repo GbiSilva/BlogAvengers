@@ -1,0 +1,11 @@
+{% extends "MarvelApp/padre.html" %}
+{% load static %}
+{% block contenidodinamico %}
+<p>Nombre del Personaje: <i>{{personajes.nombre}}</i></p>
+<p>Superpoder: <i>{{personajes.superpoder}}</i></p>
+<p>Apellido del Actor: <i>{{personajes.actor_apellido}}</i></p>
+<p>Nombre del Actor : <i>{{personajes.actor_nombre}}</i></p>
+<p>
+  <a href="{% url 'personajes_listar' %}">Volver a la lista de Personajes</a>
+</p>
+{% endblock %}

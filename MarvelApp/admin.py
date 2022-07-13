@@ -7,4 +7,5 @@ admin.site.register(Personajes)
 admin.site.register(Personajes_Pelicula)
 
 # usuario: marvel
+# email: marvel@coder.com
 # clave: universomarvel

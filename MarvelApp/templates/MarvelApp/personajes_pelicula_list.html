@@ -1,0 +1,23 @@
+{% extends "MarvelApp/padre.html" %}
+{% load static %}
+{% block contenidodinamico %}
+<h1>Esta es la sección de Personajes_Películas</h1>
+{% for personajes_pelicula in object_list %}
+<li>{{ personajes_pelicula }}</li>
+
+<button>
+  <a href="{% url 'personajes_pelicula_detalle' personajes_pelicula.id %}">Detalle</a>
+</button>
+<button>
+  <a href="{% url 'personajes_pelicula_editar' personajes_pelicula.id %}">Editar</a>
+</button>
+<button>
+  <a href="{% url 'personajes_pelicula_borrar' personajes_pelicula.id %}">Borrar</a>
+</button>
+{% endfor %}
+<br>
+<br>
+<button>
+  <a href="{% url 'personajes_pelicula_crear' %}">Crear</a>
+</button>
+{% endblock %}

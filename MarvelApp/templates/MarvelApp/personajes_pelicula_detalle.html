@@ -1,0 +1,9 @@
+{% extends "MarvelApp/padre.html" %}
+{% load static %}
+{% block contenidodinamico %}
+<p>Nombre del Personaje: <i>{{personajes_peliculas.personaje}}</i></p>
+<p>Nombre de la Película: <i>{{personajes_peliculas.pelicula}}</i></p>
+<p>
+  <a href="{% url 'personajes_peliculas_listar' %}">Volver a la lista de Personajes/Películas</a>
+</p>
+{% endblock %}
