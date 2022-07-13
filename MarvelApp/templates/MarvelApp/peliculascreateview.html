@@ -1,9 +1,0 @@
-{% extends "MarvelApp/padre.html" %}
-{% load static %}
-{% block contenidinamico %}
-<h3>Alta de Películas</h3>
-<form method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Save">
-</form>
-{% endblock  %}
